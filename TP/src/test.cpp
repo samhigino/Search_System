@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-    ifstream in("tests/input_1.txt", fstream::in);
+    ifstream in("tests/input_3.txt", fstream::in);
     ofstream out("output/output.txt", fstream::out);
     ofstream debug("output/debug.txt", fstream::out);
 
@@ -96,7 +96,7 @@ int main() {
         // Inserção do endereço na base
         debug << "Inserting address...\n";
         debug.flush();
-        manager.InsertAddress(IdEnd, IdLog, TipoLog, Log, num, Bairro, Regiao, CEP, lt, lg);
+        manager.InsertAddress(IdEnd, IdLog, TipoLog, Log, num, Bairro, Regiao, CEP, lt, lg, debug);
         debug << "Address inserted.\n\n";
         debug.flush();
     }
@@ -108,7 +108,7 @@ int main() {
     int m;      // Número de consultas
     int r;      // Máximo de respostas
     in >> m >> r;
-    out << m;
+    out << m << endl;
     debug << "Data built.\n\n";
     debug.flush();
 
@@ -140,7 +140,7 @@ int main() {
         IdCon = std::stoi(idcon_str);
         double ltc = std::stod(lt_str);
         double lgc = std::stod(lg_str);
-        origin = Point2D(lt, lg);
+        origin = Point2D(ltc, lgc);
 
         // Impressão (debug)
         debug << idcon_str << std::endl

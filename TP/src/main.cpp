@@ -69,7 +69,7 @@ int main() {
         << lg << std::endl;
 
         // Inserção do endereço na base
-        manager.InsertAddress(IdEnd, IdLog, TipoLog, Log, num, Bairro, Regiao, CEP, lt, lg);
+        manager.InsertAddress(IdEnd, IdLog, TipoLog, Log, num, Bairro, Regiao, CEP, lt, lg, std::cout);
     }
 
     // Consultas
@@ -77,7 +77,7 @@ int main() {
     int m;      // Número de consultas
     int r;      // Máximo de respostas
     std::cin >> m >> r;
-    std::cout << m;
+    std::cout << m << std::endl;
 
     int IdCon;              // Id da consulta
     std::string consulta;   // Consulta em si

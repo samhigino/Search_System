@@ -17,7 +17,7 @@ Consulta::Consulta() {
 // Insere uma palavra na árvore de pesquisa de palavras, retorna false se a palavra já existir na lista
 bool Consulta::InsertWord(Palavra palavra, std::ostream& out) {
     try {
-        this->palavras.Insert(palavra, out);
+        this->palavras.Insert(palavra, std::cout);
         return true;
     }
     catch(std::logic_error& e) {
@@ -29,7 +29,7 @@ bool Consulta::InsertWord(Palavra palavra, std::ostream& out) {
 // Procura a palavra fornecida e, se exisitir, associa o logradouro a ela
 bool Consulta::InsertLog(std::string palavra, Logradouro& log, std::ostream& out) {
     try {
-        this->palavras.Find(palavra, out).AddLog(log);
+        this->palavras.Find(palavra).AddLog(log);
         return true;
     }
     catch(std::logic_error& e) {
@@ -43,8 +43,8 @@ bool Consulta::InsertLog(std::string palavra, Logradouro& log, std::ostream& out
 }
 
 // Acha uma palavra
-Palavra& Consulta::Find(std::string palavra, std::ostream& out) {
-    return this->Find(palavra, out);
+Palavra& Consulta::Find(std::string palavra) {
+    return this->palavras.Find(palavra);
 }
 
 //------------------------------------------------------------------------------------------

@@ -35,7 +35,7 @@ class BasePalavras {
 
         // Operações
         void Insert(Palavra palavra, std::ostream& out);
-        Palavra& Find(std::string palavra, std::ostream& out);
+        Palavra& Find(std::string palavra);
         void PrintByLevel(std::ostream& out);
 
         // Controle de memória

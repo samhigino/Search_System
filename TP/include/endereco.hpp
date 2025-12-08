@@ -77,7 +77,7 @@ class BaseEnderecos {
         ~BaseEnderecos();
 
         // Operações
-        void InsertAddress(std::string idend, int idlog, std::string tipolog, std::string log, int num, std::string bairro, std::string regiao, int cep, double lt, double lg);
+        void InsertAddress(std::string idend, int idlog, std::string tipolog, std::string log, int num, std::string bairro, std::string regiao, int cep, double lt, double lg, std::ostream& debug);
         void BuildData(std::ostream& debug);
         void Search(int idc, Point2D origin, std::string consulta, int r, std::ostream& out, std::ostream& debug);
 

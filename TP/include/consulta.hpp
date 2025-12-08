@@ -19,7 +19,7 @@ class Consulta {
         // Operações
         bool InsertWord(Palavra palavra, std::ostream& out);
         bool InsertLog(std::string palavra, Logradouro& log, std::ostream& out);
-        Palavra& Find(std::string palavra, std::ostream& out);
+        Palavra& Find(std::string palavra);
         
         // Controle de memória
         int GetCurrentMemoryUsage();

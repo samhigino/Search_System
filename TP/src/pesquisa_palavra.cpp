@@ -431,7 +431,7 @@ void BasePalavras::Insert(Palavra palavra, std::ostream& out) {
 }
 
 // Busca por uma palavra na árvore
-Palavra& BasePalavras::Find(std::string palavra, std::ostream& out) {
+Palavra& BasePalavras::Find(std::string palavra) {
     Node* current = this->root;
     while(current != nullptr) {
         // Verifica se o nó atual é a palavra procurada
